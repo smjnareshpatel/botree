@@ -1,0 +1,61 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block content_title %}{% endblock %}</title>
+        
+
+        <!-- Core CSS - Include with every page -->
+        <link href="{% static 'auth/dist/css/AdminLTE.min.css' %}" rel="stylesheet">
+        <link href="{% static 'auth/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'auth/plugins/iCheck/square/blue.css' %}" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    </head>
+<body>
+    <!-- <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                 </button>
+                                
+                    <a class="navbar-brand" href="/home-admin/">DPI</a>
+            </div>
+            
+
+            {% if user.is_authenticated %}
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Account
+                            <span class="caret"></span>
+                        </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li class="divider"></li>
+                                <li><a href="/logout">Logout</a></li>
+                            </ul>
+                    </li>
+                </ul>
+            </div>
+            {% endif %}
+            </div>
+    </nav> -->
+    {% block content %}
+    {% endblock %}
+    <!-- Core Scripts - Include with every page -->
+    <script src = "{% static 'auth/plugins/jQuery/jquery-2.2.3.min.js' %}"></script>
+    <script src = "{% static 'auth/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src = "{% static 'auth/plugins/iCheck/icheck.min.js' %}"></script>
+    
+
+    {% block javascript %}
+    {% endblock %}
+    </body> 
+</html>

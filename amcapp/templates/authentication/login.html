@@ -1,0 +1,61 @@
+{% extends 'auth-base.html' %}
+
+{% load i18n admin_static %}
+
+{% block content_title %} Admin-Login {% endblock %}
+
+
+
+
+
+{% block content %}
+
+<body class="hold-transition login-page">
+  <div class="login-box">
+    <div class="login-logo">
+      <a href="#"><b>Admin</b></a>
+    </div>
+    <!-- /.login-logo -->
+    <div class="login-box-body">
+    
+  
+
+      <p class="login-box-msg">Sign in </p>
+      {% if form.errors and not form.non_field_errors %}
+      <p class="errornote" style="color: red;">
+        {% if form.errors.items|length == 1 %}{% trans "Please enter user and password." %}{% else %}{% trans "Please enter user and password.." %}{% endif %}
+      </p>
+    {% endif %}
+
+    {% if form.non_field_errors %}
+      {% for error in form.non_field_errors %}
+        <p class="errornote" style="color: red;">
+          {{ error }}
+        </p>
+      {% endfor %}
+    {% endif %}
+        <form method="post" action=".">
+        {% csrf_token %}
+          <div class="form-group has-feedback">
+            {{ form.username }}
+          <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+         </div>
+        
+        <div class="form-group has-feedback">
+          {{ form.password }}
+          <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        </div>
+        
+        <div class="row">
+          <div class="col-xs-12 text-center">
+            <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+          </div>
+        </div>
+        </form>
+       <!--  <a href="/resetpassword">I forgot my password</a><br> -->
+        <a href="/register" class="text-center">New user register</a>
+
+    </div>
+  </div>
+</body>
+{% endblock %}

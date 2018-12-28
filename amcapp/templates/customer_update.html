@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% extends 'adminbase.html' %}
+<!DOCTYPE html>
+<html>
+
+
+
+{% block title %} Admin Panel Home Customer Update{% endblock %}
+
+
+
+{% block body %}
+<div class="page">
+    <div class="page-header">
+      <h1 class="page-title">Customer Home</h1>
+
+  
+  </div>
+  
+    <div class="page-content">
+      <!-- Panel -->
+             
+      <div class="panel panel-default">
+        <div class="panel-heading">Customer Update</div>
+        <div class="panel">
+          <div class="panel-body">
+            <form class="form-horizontal" method = "POST" action ="" enctype="multipart/form-data">
+             {% csrf_token %}
+             <div class="form-group row">
+                <label class="col-xs-12 col-md-3 form-control-label">First Name</label>
+                <div class="col-xs-12 col-md-9">            
+                  {{customer_form.first_name}}
+                      
+                </div>
+              </div>
+
+             <div class="form-group row">
+                <label class="col-xs-12 col-md-3 form-control-label">Last Name</label>
+                <div class="col-xs-12 col-md-9">            
+                  {{customer_form.last_name}}
+                      
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-xs-12 col-md-3 form-control-label">Phone Number</label>
+                <div class="col-xs-12 col-md-9">            
+                  {{customer_form.phone_number}}
+                      
+                </div>
+              </div>
+                    
+              <div class="col-xs-12 col-md-6 text-xs-center">
+                <button type="submit" class="btn btn-primary">Update</button>
+               </form>
+                <a href="/customer" class="btn btn-danger" style="text-decoration:none; color: white;"  role="button">Cancel</a>
+              </div>
+           
+
+          </div>
+        </div>
+      </div>    
+      <!-- End Panel -->
+    </div>
+  </div>
+  <!-- End Page -->
+
+{% endblock %}
+</html>

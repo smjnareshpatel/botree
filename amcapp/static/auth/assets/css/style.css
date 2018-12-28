@@ -1,0 +1,105 @@
+@media (max-width: 1199px) and (min-width: 768px){
+    .css-menubar .site-menu>.site-menu-item>.site-menu-sub {        
+        background: #1073ac;
+        color: #fff;
+    }
+}
+
+@media (min-width: 1200px){
+    .css-menubar .site-menu-category {    
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .site-menubar-unfold .site-navbar .hideLogo{
+        display: none; !important;
+    }    
+}
+
+.adminStyle{
+    padding: 6px 31px;
+    font-size: 18px;
+    background: #1073ac;
+}
+
+.adminInfo{
+    font-size: 18px;
+}
+
+.dropdown-menu {    
+    color: #76838f;
+    border: 2px solid #a0c638;
+}
+.panel-body img{
+    background-color: rgba(16, 115, 172, 0.4);
+}
+
+.site-menubar {    
+    background: #6cbc35 !important;
+}
+
+.site-navbar {
+    background-color: #333;
+}
+
+.site-menubar-unfold .site-menu-category {    
+    color: #fff;
+    font-weight: bold;    
+}
+
+.site-menu-item a {    
+    color: #fff;
+}
+
+.site-menu>.site-menu-item.open {
+    background: #522d80 !important;
+}
+    
+.panel-default .panel-heading {
+    color: #fff;
+    background-color: #522d80;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.panel-body {    
+    overflow: auto;
+}
+
+.site-menubar-fold .site-menu>.site-menu-item>.site-menu-sub {
+    background: #522d80;
+}
+
+.site-menu-item a {
+    color: #fff;
+    font-weight: bold;
+}  
+
+.form-group .form-control-label {    
+    color: #000;
+    font-size: 1.2rem;
+}
+
+.form-control {
+    border-color: #000;
+    color: #000;
+    border: 1px solid #000;
+    
+}
+.btn-primary {
+    color: #fff;
+    border-color:#522d80;
+    background-color: #522d80;
+}
+
+/*admin contact page */
+
+.addr1 {
+	width: 110px;
+}
+
+.media-heading {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
